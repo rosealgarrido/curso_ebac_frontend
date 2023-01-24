@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1  {
+    text-align: center;
+    color: blue;
+    font-size: 54px;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+    font-size: 32px;
+}
+
+#form-js input,
+#form-js button {
+    display: block;
+    margin: auto;
+    padding: 8px;
+    margin-top: 15px;
+}
+
+#form-js button {
+    background-color: darkblue;
+    color: #fff;
+}
+
+.error-message{ 
+    font-size: 12px;
+    padding: 8px;
+    background-color: red;
+    color: #fff;
+    margin-top: 8px;
+    width: 255px;
+    display: none;
+    margin: auto;
+}
+
+.input.error {
+    color: red;
+    border-color: red;
+    outline-color:  red;
+}

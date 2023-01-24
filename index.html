@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Integrando HTML com Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Integrando HTML com Javascript</h1>
+        <h2>Digite os valores</h2>
+        <form action="form" id="form-js">
+            <input type="number" id="numero-a" placeholder="Digite o número A" required>
+            <input type="number" id="numero-b" placeholder="Digite o número B" required>
+            <p class="error-message"> </p>
+            <p id="resultado"></p>
+            <button id="enviar" type="submit" onclick="verificar()">Enviar</button>
+        </form>
+        <p class="sucess-message"></p>
+    </div> <!--container-->
+    <script src="main.js"></script>
+</body>
+</html>
