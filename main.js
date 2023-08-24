@@ -1,23 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const nameElement = document.querySelector('#name');
-    const usernameElement = document.querySelector('#username');
-    const avatarElement = document.querySelector("#avatar");
-    const reposElement = document.querySelector('#repos');
-    const followersElement = document.querySelector('#followers');
-    const followingElement = document.querySelector('#following');
-    const linkElement = document.querySelector('#link');
+const funcionariaAna = {
+    nome: 'Ana Machado',
+    idade: '35',
+    profissao: 'gerente TI',
+}
 
-    fetch('https://api.github.com/users/rosealgarrido')
-        .then(function(res) {
-            return res.json();
-        })
-        .then(function(json) {
-            nameElement.innerText = json.name;
-            usernameElement.innerText = json.login;
-            avatarElement.src = json.avatar_url;
-            followingElement.innerText = json.following;
-            followersElement.innerText = json.followers;
-            repos.innerText = json.public_repos;
-            linkElement.href = json.html_url;
-        })
-})
+const funcionarioJoao = {
+    nome: 'João Oliveira',
+    idade: '25',
+    profissao: 'suporte',
+}
+
+function Funcionario(nome, idade, profissao) {
+    this.nome = nome;
+    this.idade = idade;
+    this.profissao = profissao;
+}
+
+const funcionariaFernanda = new Funcionario("Fernanda Costa", 30, "Analista de Dados");
+const funcionarioPaulo = new Funcionario("Paulo Figueiredo", 45, "Gerente de Projetos");
+const funcionariaMaria = new Funcionario("Maria Silva", 28, "Analista de Suporte");
+
+console.log(funcionariaAna);
+console.log(funcionarioJoao);
+console.log(funcionariaFernanda);
+console.log(funcionarioPaulo);
+console.log(funcionariaMaria);
+
