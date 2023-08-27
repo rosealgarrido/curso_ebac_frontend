@@ -1,28 +1,64 @@
-const funcionariaAna = {
-    nome: 'Ana Machado',
-    idade: '35',
-    profissao: 'gerente TI',
+const cachorro = {
+    raca: 'Pastor Alemão',
+    apelido: 'Rambo',
+    idade: 2,
+    rugido: function() {
+        console.log("au,au");
+    }
 }
 
-const funcionarioJoao = {
-    nome: 'João Oliveira',
-    idade: '25',
-    profissao: 'suporte',
+const gato = {
+    raca: 'Siames',
+    apelido: 'Duda',
+    idade: 3,
+    rugido: function() {
+        console.log("miau");
+    }
 }
 
-function Funcionario(nome, idade, profissao) {
-    this.nome = nome;
-    this.idade = idade;
-    this.profissao = profissao;
+function Animal(raca) {
+    this.raca = raca;
+    this.rugido = function() {
+        console.log("rugido");
+    }
 }
 
-const funcionariaFernanda = new Funcionario("Fernanda Costa", 30, "Analista de Dados");
-const funcionarioPaulo = new Funcionario("Paulo Figueiredo", 45, "Gerente de Projetos");
-const funcionariaMaria = new Funcionario("Maria Silva", 28, "Analista de Suporte");
+const cachorro2 = new Cachorro("Basset", "Kira", 5);
+const gato2 = new Gato("Korat", "Belisco", 1);
 
-console.log(funcionariaAna);
-console.log(funcionarioJoao);
-console.log(funcionariaFernanda);
-console.log(funcionarioPaulo);
-console.log(funcionariaMaria);
+
+function Cachorro(apelido) {
+    this.apelido = apelido
+    this.dizApelido = function() {
+        return apelido;
+    }
+}
+
+console.log(cachorro2);
+console.log(gato2);
+
+function Gato(idade) {
+    this.idade = idade
+    this.dizIdade = function() {
+        return idade;
+    }
+}
+
+const cavalo = {
+    raca: 'mangalarga',
+    apelido: 'Apolo',
+    idade: 3,
+    corDoPelo: 'Marrom',
+}
+
+function Cavalo(corDoPelo) {
+const cavalo = new Cavalo("marrom");
+this.corDoPelo = corDoPelo;
+    return corDoPelo;
+}
+
+console.log(cachorro.raca);
+console.log(gato.apelido);
+console.log(cavalo.corDoPelo);
+
 
