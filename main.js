@@ -23,24 +23,27 @@ function Animal(raca) {
     }
 }
 
-const cachorro2 = new Cachorro("Basset", "Kira", 5);
-const gato2 = new Gato("Korat", "Belisco", 1);
+const cachorro2 = new Cachorro("Basset", "Kira");
+const gato2 = new Gato("Korat", 1);
 
 
 function Cachorro(apelido) {
     this.apelido = apelido
     this.dizApelido = function() {
-        return apelido;
+        console.log(this, apelido);
+
+        Animal.call(this, "Kira");
+
+        
     }
 }
-
-console.log(cachorro2);
-console.log(gato2);
 
 function Gato(idade) {
     this.idade = idade
     this.dizIdade = function() {
-        return idade;
+        console.log(this, idade);
+
+        Animal.call(this, 1);
     }
 }
 
@@ -54,11 +57,15 @@ const cavalo = {
 function Cavalo(corDoPelo) {
 const cavalo = new Cavalo("marrom");
 this.corDoPelo = corDoPelo;
-    return corDoPelo;
+    console.log(this, corDoPelo);
+
+    Animal.call(this, "Marrom");
 }
 
 console.log(cachorro.raca);
 console.log(gato.apelido);
 console.log(cavalo.corDoPelo);
+console.log(cachorro2);
+console.log(gato2);
 
 
